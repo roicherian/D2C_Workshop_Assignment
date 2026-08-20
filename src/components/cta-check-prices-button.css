@@ -1,0 +1,8 @@
+.cta-check-prices.acko-button--primary {
+  background: var(--color-success);
+  color: var(--color-success-foreground);
+}
+
+.cta-check-prices.acko-button--primary:hover {
+  background: var(--color-success-hover);
+}

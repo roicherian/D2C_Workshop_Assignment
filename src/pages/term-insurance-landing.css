@@ -1,0 +1,16 @@
+.term-insurance-landing__container {
+  padding: var(--space-5);
+}
+
+.term-insurance-landing__content {
+  margin-top: var(--space-5);
+}
+
+.term-insurance-landing__heading {
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.term-insurance-landing__body {
+  margin: 0;
+}

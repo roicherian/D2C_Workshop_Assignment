@@ -1,0 +1,49 @@
+.term-insurance-quote__container {
+  padding: var(--space-5);
+  padding-bottom: var(--space-8);
+}
+
+.term-insurance-quote__heading {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.term-insurance-quote__subheading {
+  margin-bottom: var(--space-6);
+  display: block;
+}
+
+.term-insurance-quote__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.term-insurance-quote__submit {
+  margin-top: var(--space-2);
+}
+
+.term-insurance-quote__result {
+  margin-top: var(--space-6);
+  text-align: center;
+}
+
+.term-insurance-quote__premium {
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+.term-insurance-quote__premium-period {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.term-insurance-quote__summary {
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.term-insurance-quote__disclaimer {
+  display: block;
+}

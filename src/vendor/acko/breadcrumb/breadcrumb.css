@@ -1,0 +1,30 @@
+.acko-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.acko-breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.acko-breadcrumb a {
+  color: var(--color-text-muted);
+}
+.acko-breadcrumb a:hover {
+  color: var(--color-primary);
+}
+
+.acko-breadcrumb span[aria-current='page'] {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.acko-breadcrumb__separator {
+  color: var(--color-border);
+}

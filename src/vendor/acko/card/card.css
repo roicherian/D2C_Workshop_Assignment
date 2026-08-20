@@ -1,0 +1,18 @@
+.acko-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.acko-card-header {
+  padding: var(--space-4) var(--space-5) 0;
+}
+
+.acko-card-content {
+  padding: var(--space-5);
+}
+
+.acko-card-footer {
+  padding: 0 var(--space-5) var(--space-5);
+}

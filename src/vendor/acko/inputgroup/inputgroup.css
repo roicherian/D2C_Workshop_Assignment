@@ -1,0 +1,32 @@
+.acko-input-group {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.acko-input-group__prefix,
+.acko-input-group__suffix {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-4);
+  background: var(--color-surface-muted);
+  color: var(--color-text-muted);
+  font-size: 15px;
+}
+
+.acko-input-group .acko-text-input {
+  border: none;
+  border-radius: 0;
+}
+
+.acko-input-group:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-icon-bg);
+}
+
+.acko-input-group .acko-text-input:focus {
+  box-shadow: none;
+}
