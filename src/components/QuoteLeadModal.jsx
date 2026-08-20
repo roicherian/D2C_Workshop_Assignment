@@ -16,9 +16,13 @@ export function QuoteLeadModal({ open, onClose }) {
     <Modal open={open} onClose={onClose}>
       <ModalHeader title="Let's build a perfect life insurance cover for you" onClose={onClose} />
       <ModalBody>
-        <Field label="Your name" htmlFor="lead-name">
-          <TextInput id="lead-name" placeholder="John  Paul " value={name} onChange={(e) => setName(e.target.value)} />
-        </Field>
+        <TextInput
+          id="lead-name"
+          label="Your name"
+          placeholder="John  Paul "
+          value={name}
+          onChange={setName}
+        />
 
         <Field label="Your gender">
           <SegmentedToggleGroup

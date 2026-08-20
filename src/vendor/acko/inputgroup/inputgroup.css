@@ -3,7 +3,7 @@
   align-items: stretch;
   height: 48px;
   border: 1px solid var(--colorInputBorder);
-  border-radius: var(--radiusLg);
+  border-radius: var(--radiusFull);
   overflow: hidden;
   background: var(--colorInputBg);
 }

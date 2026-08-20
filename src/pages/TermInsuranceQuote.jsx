@@ -4,7 +4,6 @@ import { Breadcrumb } from '@acko/breadcrumb'
 import { Typography } from '@acko/typography'
 import { Field } from '@acko/field'
 import { TextInput } from '@acko/textinput'
-import { InputGroup } from '@acko/inputgroup'
 import { RadioGroup } from '@acko/radiogroup'
 import { Dropdown } from '@acko/dropdown'
 import { Toggle } from '@acko/toggle'
@@ -84,19 +83,23 @@ export function TermInsuranceQuote() {
         </Typography>
 
         <form className="term-insurance-quote__form" onSubmit={handleSubmit}>
-          <Field label="Full name" htmlFor="name" required>
-            <TextInput
-              id="name"
-              placeholder="As per your ID proof"
-              value={form.name}
-              onChange={(e) => setField('name', e.target.value)}
-              required
-            />
-          </Field>
+          <TextInput
+            id="name"
+            label="Full name"
+            placeholder="As per your ID proof"
+            value={form.name}
+            onChange={(value) => setField('name', value)}
+            required
+          />
 
-          <Field label="Date of birth" htmlFor="dob" required>
-            <TextInput id="dob" type="date" value={form.dob} onChange={(e) => setField('dob', e.target.value)} required />
-          </Field>
+          <TextInput
+            id="dob"
+            label="Date of birth"
+            type="date"
+            value={form.dob}
+            onChange={(value) => setField('dob', value)}
+            required
+          />
 
           <Field label="Gender" required>
             <RadioGroup
@@ -111,18 +114,16 @@ export function TermInsuranceQuote() {
             />
           </Field>
 
-          <Field label="Mobile number" htmlFor="mobile" required>
-            <InputGroup prefix="+91">
-              <TextInput
-                id="mobile"
-                type="tel"
-                placeholder="98765 43210"
-                value={form.mobile}
-                onChange={(e) => setField('mobile', e.target.value)}
-                required
-              />
-            </InputGroup>
-          </Field>
+          <TextInput
+            id="mobile"
+            label="Mobile number"
+            type="tel"
+            prefix="+91"
+            placeholder="98765 43210"
+            value={form.mobile}
+            onChange={(value) => setField('mobile', value)}
+            required
+          />
 
           <Field label="Do you smoke or use tobacco?">
             <Toggle id="smoker" checked={form.smoker} onChange={(value) => setField('smoker', value)} label={form.smoker ? 'Yes' : 'No'} />

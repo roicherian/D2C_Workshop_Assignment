@@ -107,6 +107,10 @@
   --colorBorderSubtle: var(--grey200);
   --colorDivider: var(--grey200);
 
+  /* Error */
+  --colorError: var(--red600);
+  --colorErrorBorder: var(--red200);
+
   /* Cards */
   --colorCardBg: var(--grey50);
   --colorCardBorder: var(--greyWhite);

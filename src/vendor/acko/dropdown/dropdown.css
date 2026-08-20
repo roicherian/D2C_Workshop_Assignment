@@ -1,9 +1,9 @@
 .acko-dropdown {
   width: 100%;
   height: 48px;
-  padding: 0 16px;
+  padding: 0 20px;
   border: 1px solid var(--colorInputBorder);
-  border-radius: var(--radiusLg);
+  border-radius: var(--radiusFull);
   font-family: var(--fontFamily);
   font-size: var(--fontBodyMdSize);
   color: var(--colorTextPrimary);
@@ -13,8 +13,8 @@
     linear-gradient(45deg, transparent 50%, var(--colorTextSecondary) 50%),
     linear-gradient(135deg, var(--colorTextSecondary) 50%, transparent 50%);
   background-position:
-    calc(100% - 20px) calc(50% - 3px),
-    calc(100% - 15px) calc(50% - 3px);
+    calc(100% - 24px) calc(50% - 3px),
+    calc(100% - 19px) calc(50% - 3px);
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
 }
