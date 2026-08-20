@@ -9,15 +9,24 @@
 
 .hero__features {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: stretch;
   gap: 12px;
   margin-bottom: 20px;
 }
 
+.hero__feature-card {
+  flex: 1;
+  min-width: 0;
+}
+
 .hero__feature-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 12px;
+  height: 100%;
 }
 
 .hero__feature-icon {
