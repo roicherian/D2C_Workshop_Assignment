@@ -1,10 +1,7 @@
-import { useState } from 'react'
 import { Breadcrumb } from '@acko/breadcrumb'
 import { Typography } from '@acko/typography'
-import { Button } from '@acko/button'
 import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
-import { QuoteLeadModal } from '../components/QuoteLeadModal'
 import { ShieldUpIcon, HandIcon } from '../components/icons'
 import './term-insurance-landing.css'
 
@@ -14,8 +11,6 @@ const HERO_FEATURES = [
 ]
 
 export function TermInsuranceLanding() {
-  const [isLeadModalOpen, setIsLeadModalOpen] = useState(false)
-
   return (
     <div className="term-insurance-landing">
       <Header />
@@ -49,20 +44,8 @@ export function TermInsuranceLanding() {
             education, and other financial goals — even when you're no longer there to provide for
             them.
           </Typography>
-
-          <Button
-            variant="secondary"
-            size="lg"
-            fullWidth
-            className="term-insurance-landing__preview-modal-btn"
-            onClick={() => setIsLeadModalOpen(true)}
-          >
-            Preview quote popup
-          </Button>
         </section>
       </div>
-
-      <QuoteLeadModal open={isLeadModalOpen} onClose={() => setIsLeadModalOpen(false)} />
     </div>
   )
 }
