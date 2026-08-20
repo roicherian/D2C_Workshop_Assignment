@@ -1,8 +1,16 @@
 import './card.css'
 
-export function Card({ padding = 'md', className = '', children, ...props }) {
+export function Card({ variant = 'elevated', padding = 'md', className = '', children, ...props }) {
+  const classes = [
+    'acko-card',
+    `acko-card--${variant}`,
+    `acko-card--padding-${padding}`,
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ')
   return (
-    <div className={['acko-card', `acko-card--padding-${padding}`, className].filter(Boolean).join(' ')} {...props}>
+    <div className={classes} {...props}>
       {children}
     </div>
   )

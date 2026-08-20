@@ -110,6 +110,7 @@
   /* Cards */
   --colorCardBg: var(--grey50);
   --colorCardBorder: var(--greyWhite);
+  --colorCardOutlineBorder: var(--grey200);
 
   /* Breadcrumb */
   --colorBreadcrumbText: var(--grey400);

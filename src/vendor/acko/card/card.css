@@ -1,10 +1,21 @@
 .acko-card {
   background: var(--colorCardBg);
-  border: 1px solid var(--colorCardBorder);
   border-radius: var(--radius4xl);
+}
+
+.acko-card--elevated {
+  border: 1px solid var(--colorCardBorder);
   box-shadow: var(--shadowCard);
 }
 
+.acko-card--outline {
+  border: 1px solid var(--colorCardOutlineBorder);
+  box-shadow: none;
+}
+
+.acko-card--padding-none {
+  padding: 0;
+}
 .acko-card--padding-sm {
   padding: 12px;
 }
