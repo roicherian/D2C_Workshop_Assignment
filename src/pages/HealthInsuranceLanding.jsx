@@ -21,7 +21,7 @@ export function HealthInsuranceLanding() {
         ctaTo="/health-insurance/quote"
       />
 
-      <div className="health-insurance-landing__container">
+      <div className="health-insurance-landing__container section-container">
         <Breadcrumb
           items={[
             { label: 'Home', href: '/' },

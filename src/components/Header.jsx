@@ -7,8 +7,8 @@ const LOGO_URL =
 
 export function Header() {
   return (
-    <header className="site-header">
-      <div className="site-header__inner">
+    <header className="site-header full-bleed">
+      <div className="site-header__inner section-container">
         <a className="site-header__logo" href="/" aria-label="ACKO home">
           <img src={LOGO_URL} alt="ACKO" height={24} />
         </a>

@@ -25,7 +25,7 @@ export function TermInsuranceLanding() {
         onCtaClick={() => setIsCheckPricesOpen(true)}
       />
 
-      <div className="term-insurance-landing__container">
+      <div className="term-insurance-landing__container section-container">
         <Breadcrumb
           items={[
             { label: 'Home', href: '/' },

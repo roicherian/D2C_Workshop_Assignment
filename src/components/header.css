@@ -1,5 +1,4 @@
 .site-header {
-  padding: 16px 24px;
   background: var(--colorCardBg);
 }
 
@@ -7,6 +6,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .site-header__inner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .site-header__logo {

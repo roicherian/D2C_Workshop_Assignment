@@ -4,7 +4,7 @@ import './health-insurance-quote-stub.css'
 
 export function HealthInsuranceQuoteStub() {
   return (
-    <div className="health-insurance-quote-stub">
+    <div className="health-insurance-quote-stub section-container">
       <Breadcrumb
         items={[
           { label: 'Home', href: '/' },

@@ -95,10 +95,35 @@ ol {
 }
 
 .app-shell {
-  max-width: 430px;
-  margin: 0 auto;
   min-height: 100vh;
   background: var(--colorCardBg);
-  box-shadow: var(--shadowMd);
   overflow-x: hidden;
+}
+
+/* Section Container — layout.md */
+.section-container {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* Full-bleed outer wrapper — layout.md two-layer pattern */
+.full-bleed {
+  width: 100%;
 }

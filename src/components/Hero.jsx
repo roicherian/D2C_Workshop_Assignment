@@ -5,32 +5,34 @@ import './hero.css'
 
 export function Hero({ headline, features, arn, ctaTo, ctaLabel = 'Check prices', onCtaClick }) {
   return (
-    <section className="hero">
-      <div className="hero__inner">
-        <Typography as="h1" variant="display-sm" weight="bold" className="hero__headline">
-          {headline}
-        </Typography>
+    <section className="hero full-bleed">
+      <div className="hero__inner section-container">
+        <div className="hero__content">
+          <Typography as="h1" variant="display-sm" weight="bold" className="hero__headline">
+            {headline}
+          </Typography>
 
-        <div className="hero__features">
-          {features.map((feature) => (
-            <Card key={feature.text} padding="sm" className="hero__feature-card">
-              <CardContent className="hero__feature-content">
-                <span className="hero__feature-icon">{feature.icon}</span>
-                <Typography variant="body-sm" className="hero__feature-text">
-                  {feature.text}
-                </Typography>
-              </CardContent>
-            </Card>
-          ))}
+          <div className="hero__features">
+            {features.map((feature) => (
+              <Card key={feature.text} padding="sm" className="hero__feature-card">
+                <CardContent className="hero__feature-content">
+                  <span className="hero__feature-icon">{feature.icon}</span>
+                  <Typography variant="body-sm" className="hero__feature-text">
+                    {feature.text}
+                  </Typography>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <CtaCheckPricesButton to={ctaTo} onClick={onCtaClick}>
+            {ctaLabel}
+          </CtaCheckPricesButton>
+
+          <Typography variant="caption" color="secondary" align="center" className="hero__fine-print">
+            {arn}
+          </Typography>
         </div>
-
-        <CtaCheckPricesButton to={ctaTo} onClick={onCtaClick}>
-          {ctaLabel}
-        </CtaCheckPricesButton>
-
-        <Typography variant="caption" color="secondary" align="center" className="hero__fine-print">
-          {arn}
-        </Typography>
       </div>
     </section>
   )

@@ -1,10 +1,47 @@
 .hero {
   background: linear-gradient(180deg, var(--colorPrimarySubtle) 0%, var(--colorSurface) 100%);
-  padding: 32px 24px 48px;
+}
+
+.hero__inner {
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .hero__inner {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__inner {
+    padding-top: 64px;
+    padding-bottom: 80px;
+  }
+}
+
+.hero__content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .hero__content {
+    text-align: center;
+  }
 }
 
 .hero__headline {
   margin-bottom: 20px;
+}
+
+@media (min-width: 1024px) {
+  .hero__headline {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1px;
+  }
 }
 
 .hero__features {

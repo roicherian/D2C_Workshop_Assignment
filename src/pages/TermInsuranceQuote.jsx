@@ -65,7 +65,7 @@ export function TermInsuranceQuote() {
 
   return (
     <div className="term-insurance-quote">
-      <div className="term-insurance-quote__container">
+      <div className="term-insurance-quote__container section-container">
         <Breadcrumb
           items={[
             { label: 'Home', href: '/' },
@@ -75,109 +75,116 @@ export function TermInsuranceQuote() {
           ]}
         />
 
-        <Typography as="h1" variant="heading-lg" weight="bold" className="term-insurance-quote__heading">
-          Get your term insurance quote
-        </Typography>
-        <Typography variant="body-md" color="secondary" className="term-insurance-quote__subheading">
-          Answer a few quick questions to see your estimated premium.
-        </Typography>
+        <div className="term-insurance-quote__content">
+          <Typography as="h1" variant="heading-lg" weight="bold" className="term-insurance-quote__heading">
+            Get your term insurance quote
+          </Typography>
+          <Typography variant="body-md" color="secondary" className="term-insurance-quote__subheading">
+            Answer a few quick questions to see your estimated premium.
+          </Typography>
 
-        <form className="term-insurance-quote__form" onSubmit={handleSubmit}>
-          <TextInput
-            id="name"
-            label="Full name"
-            placeholder="As per your ID proof"
-            value={form.name}
-            onChange={(value) => setField('name', value)}
-            required
-          />
-
-          <TextInput
-            id="dob"
-            label="Date of birth"
-            type="date"
-            value={form.dob}
-            onChange={(value) => setField('dob', value)}
-            required
-          />
-
-          <Field label="Gender" required>
-            <RadioGroup
-              name="gender"
-              value={form.gender}
-              onChange={(value) => setField('gender', value)}
-              options={[
-                { value: 'male', label: 'Male' },
-                { value: 'female', label: 'Female' },
-                { value: 'other', label: 'Other' },
-              ]}
+          <form className="term-insurance-quote__form" onSubmit={handleSubmit}>
+            <TextInput
+              id="name"
+              label="Full name"
+              placeholder="As per your ID proof"
+              value={form.name}
+              onChange={(value) => setField('name', value)}
+              required
             />
-          </Field>
 
-          <TextInput
-            id="mobile"
-            label="Mobile number"
-            type="tel"
-            prefix="+91"
-            placeholder="98765 43210"
-            value={form.mobile}
-            onChange={(value) => setField('mobile', value)}
-            required
-          />
-
-          <Field label="Do you smoke or use tobacco?">
-            <Toggle id="smoker" checked={form.smoker} onChange={(value) => setField('smoker', value)} label={form.smoker ? 'Yes' : 'No'} />
-          </Field>
-
-          <Field label="Coverage amount" htmlFor="coverage" hint="Choose how much your family should receive">
-            <PriceSlider
-              id="coverage"
-              min={2500000}
-              max={20000000}
-              step={2500000}
-              value={form.coverage}
-              onChange={(value) => setField('coverage', value)}
-              formatValue={formatCoverage}
+            <TextInput
+              id="dob"
+              label="Date of birth"
+              type="date"
+              value={form.dob}
+              onChange={(value) => setField('dob', value)}
+              required
             />
-          </Field>
 
-          <Field label="Policy term" htmlFor="term" required>
-            <Dropdown id="term" value={form.term} onChange={(value) => setField('term', value)} options={TERM_OPTIONS} />
-          </Field>
+            <Field label="Gender" required>
+              <RadioGroup
+                name="gender"
+                value={form.gender}
+                onChange={(value) => setField('gender', value)}
+                options={[
+                  { value: 'male', label: 'Male' },
+                  { value: 'female', label: 'Female' },
+                  { value: 'other', label: 'Other' },
+                ]}
+              />
+            </Field>
 
-          <Button
-            type="submit"
-            variant="primary"
-            size="lg"
-            fullWidth
-            iconRight={<ArrowRight aria-hidden="true" />}
-            className="term-insurance-quote__submit"
-          >
-            See my premium
-          </Button>
-        </form>
+            <TextInput
+              id="mobile"
+              label="Mobile number"
+              type="tel"
+              prefix="+91"
+              placeholder="98765 43210"
+              value={form.mobile}
+              onChange={(value) => setField('mobile', value)}
+              required
+            />
 
-        {quote && (
-          <Card padding="lg" className="term-insurance-quote__result">
-            <CardHeader>
-              <Typography as="h3" variant="heading-md" weight="semibold">
-                Your estimated premium
-              </Typography>
-            </CardHeader>
-            <CardContent>
-              <Typography variant="display-sm" weight="bold" className="term-insurance-quote__premium">
-                ₹{quote.premium.toLocaleString('en-IN')}
-                <span className="term-insurance-quote__premium-period">/month</span>
-              </Typography>
-              <Typography variant="body-sm" color="secondary" className="term-insurance-quote__summary">
-                {formatCoverage(quote.coverage)} cover for {quote.term} years
-              </Typography>
-              <Typography variant="caption" color="secondary" className="term-insurance-quote__disclaimer">
-                This is an indicative estimate only. Final premium depends on medical underwriting. ARN: L0130 | *T&C Apply
-              </Typography>
-            </CardContent>
-          </Card>
-        )}
+            <Field label="Do you smoke or use tobacco?">
+              <Toggle
+                id="smoker"
+                checked={form.smoker}
+                onChange={(value) => setField('smoker', value)}
+                label={form.smoker ? 'Yes' : 'No'}
+              />
+            </Field>
+
+            <Field label="Coverage amount" htmlFor="coverage" hint="Choose how much your family should receive">
+              <PriceSlider
+                id="coverage"
+                min={2500000}
+                max={20000000}
+                step={2500000}
+                value={form.coverage}
+                onChange={(value) => setField('coverage', value)}
+                formatValue={formatCoverage}
+              />
+            </Field>
+
+            <Field label="Policy term" htmlFor="term" required>
+              <Dropdown id="term" value={form.term} onChange={(value) => setField('term', value)} options={TERM_OPTIONS} />
+            </Field>
+
+            <Button
+              type="submit"
+              variant="primary"
+              size="lg"
+              fullWidth
+              iconRight={<ArrowRight aria-hidden="true" />}
+              className="term-insurance-quote__submit"
+            >
+              See my premium
+            </Button>
+          </form>
+
+          {quote && (
+            <Card padding="lg" className="term-insurance-quote__result">
+              <CardHeader>
+                <Typography as="h3" variant="heading-md" weight="semibold">
+                  Your estimated premium
+                </Typography>
+              </CardHeader>
+              <CardContent>
+                <Typography variant="display-sm" weight="bold" className="term-insurance-quote__premium">
+                  ₹{quote.premium.toLocaleString('en-IN')}
+                  <span className="term-insurance-quote__premium-period">/month</span>
+                </Typography>
+                <Typography variant="body-sm" color="secondary" className="term-insurance-quote__summary">
+                  {formatCoverage(quote.coverage)} cover for {quote.term} years
+                </Typography>
+                <Typography variant="caption" color="secondary" className="term-insurance-quote__disclaimer">
+                  This is an indicative estimate only. Final premium depends on medical underwriting. ARN: L0130 | *T&C Apply
+                </Typography>
+              </CardContent>
+            </Card>
+          )}
+        </div>
       </div>
     </div>
   )

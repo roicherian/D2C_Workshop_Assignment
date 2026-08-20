@@ -1,6 +1,17 @@
 .term-insurance-quote__container {
-  padding: 24px;
+  padding-top: 24px;
   padding-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .term-insurance-quote__container {
+    padding-top: 32px;
+  }
+}
+
+.term-insurance-quote__content {
+  max-width: 560px;
+  margin: 0 auto;
 }
 
 .term-insurance-quote__heading {
