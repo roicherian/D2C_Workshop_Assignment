@@ -1,20 +1,22 @@
 .acko-field {
-  margin-bottom: var(--space-5);
+  margin-bottom: 20px;
 }
 
 .acko-field__required {
-  color: var(--color-accent);
+  color: var(--colorTextError);
   margin-left: 2px;
 }
 
 .acko-field__hint {
-  margin: var(--space-2) 0 0;
-  font-size: 12px;
-  color: var(--color-text-muted);
+  margin: 8px 0 0;
+  font-size: var(--fontLabelMdSize);
+  font-weight: var(--fontLabelMdWeight);
+  color: var(--colorTextSecondary);
 }
 
 .acko-field__error {
-  margin: var(--space-2) 0 0;
-  font-size: 12px;
-  color: var(--color-accent);
+  margin: 8px 0 0;
+  font-size: var(--fontLabelMdSize);
+  font-weight: var(--fontLabelMdWeight);
+  color: var(--colorTextError);
 }

@@ -1,7 +1,10 @@
 .acko-label {
   display: block;
-  margin-bottom: var(--space-2);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-text);
+  margin-bottom: 8px;
+  font-family: var(--fontFamily);
+  font-size: var(--fontLabelLgSize);
+  line-height: var(--fontLabelLgLine);
+  letter-spacing: var(--fontLabelLgSpacing);
+  font-weight: var(--fontLabelLgWeight);
+  color: var(--colorTextDefault);
 }

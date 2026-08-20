@@ -1,19 +1,42 @@
 .acko-radio-group {
   display: flex;
-  gap: var(--space-4);
+  gap: 16px;
 }
 
 .acko-radio-group__option {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  font-size: 14px;
-  color: var(--color-text);
+  gap: 8px;
+  font-family: var(--fontFamily);
+  font-size: var(--fontBodyMdSize);
+  color: var(--colorTextPrimary);
   cursor: pointer;
 }
 
-.acko-radio-group__option input {
-  accent-color: var(--color-primary);
-  width: 18px;
-  height: 18px;
+.acko-radio-group__option input[type='radio'] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radiusFull);
+  border: 1.5px solid var(--colorRadioBorder);
+  position: relative;
+  margin: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .acko-radio-group__option input[type='radio']:hover {
+    border-color: var(--colorRadioHoverBorder);
+  }
+}
+
+.acko-radio-group__option input[type='radio']:checked {
+  border-color: var(--colorRadioSelectedBorder);
+}
+
+.acko-radio-group__option input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: var(--radiusFull);
+  background: var(--colorRadioSelectedDot);
 }

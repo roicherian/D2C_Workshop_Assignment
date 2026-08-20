@@ -1,18 +1,29 @@
 .acko-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  background: var(--colorCardBg);
+  border: 1px solid var(--colorCardBorder);
+  border-radius: var(--radius4xl);
+  box-shadow: var(--shadowCard);
+}
+
+.acko-card--padding-sm {
+  padding: 12px;
+}
+.acko-card--padding-md {
+  padding: 20px;
+}
+.acko-card--padding-lg {
+  padding: 24px;
 }
 
 .acko-card-header {
-  padding: var(--space-4) var(--space-5) 0;
+  margin-bottom: 12px;
 }
 
 .acko-card-content {
-  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
 }
 
 .acko-card-footer {
-  padding: 0 var(--space-5) var(--space-5);
+  margin-top: 16px;
 }

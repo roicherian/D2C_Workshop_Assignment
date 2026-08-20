@@ -7,16 +7,16 @@ export function Hero({ headline, features, arn, ctaTo, ctaLabel = 'Check prices'
   return (
     <section className="hero">
       <div className="hero__inner">
-        <Typography as="h1" variant="display" className="hero__headline">
+        <Typography as="h1" variant="display-sm" weight="bold" className="hero__headline">
           {headline}
         </Typography>
 
         <div className="hero__features">
           {features.map((feature) => (
-            <Card key={feature.text} className="hero__feature-card">
+            <Card key={feature.text} padding="sm" className="hero__feature-card">
               <CardContent className="hero__feature-content">
                 <span className="hero__feature-icon">{feature.icon}</span>
-                <Typography variant="bodySmall" className="hero__feature-text">
+                <Typography variant="body-sm" className="hero__feature-text">
                   {feature.text}
                 </Typography>
               </CardContent>
@@ -26,7 +26,7 @@ export function Hero({ headline, features, arn, ctaTo, ctaLabel = 'Check prices'
 
         <CtaCheckPricesButton to={ctaTo}>{ctaLabel}</CtaCheckPricesButton>
 
-        <Typography variant="caption" className="hero__fine-print">
+        <Typography variant="caption" color="secondary" align="center" className="hero__fine-print">
           {arn}
         </Typography>
       </div>

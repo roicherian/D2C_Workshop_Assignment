@@ -1,15 +1,21 @@
 .acko-text-input {
   width: 100%;
-  padding: var(--space-3) var(--space-4);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  font-size: 15px;
-  color: var(--color-text);
-  background: var(--color-surface);
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--colorInputBorder);
+  border-radius: var(--radiusLg);
+  font-family: var(--fontFamily);
+  font-size: var(--fontBodyMdSize);
+  color: var(--colorTextPrimary);
+  background: var(--colorInputBg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .acko-text-input:hover {
+    border-color: var(--colorInputHoverBorder);
+  }
 }
 
 .acko-text-input:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px var(--color-icon-bg);
+  border-color: var(--colorInputFocusBorder);
 }

@@ -1,12 +1,13 @@
 .price-slider {
-  padding-top: var(--space-2);
+  padding-top: 8px;
 }
 
 .price-slider__value {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: var(--space-3);
+  font-family: var(--fontFamily);
+  font-size: var(--fontHeadingMdSize);
+  font-weight: var(--fontWeightBold);
+  color: var(--colorPrimary);
+  margin-bottom: 12px;
   text-align: center;
 }
 
@@ -14,42 +15,43 @@
   width: 100%;
   appearance: none;
   height: 6px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radiusFull);
   background: linear-gradient(
     to right,
-    var(--color-primary) 0%,
-    var(--color-primary) var(--price-slider-fill),
-    var(--color-border) var(--price-slider-fill),
-    var(--color-border) 100%
+    var(--colorSliderTrackActiveFrom) 0%,
+    var(--colorSliderTrackActiveTo) var(--price-slider-fill),
+    var(--colorSliderTrackInactiveFrom) var(--price-slider-fill),
+    var(--colorSliderTrackInactiveTo) 100%
   );
   outline: none;
 }
 
 .price-slider__input::-webkit-slider-thumb {
   appearance: none;
-  width: 22px;
-  height: 22px;
+  width: var(--sliderThumbSizeMd);
+  height: var(--sliderThumbSizeMd);
   border-radius: 50%;
-  background: var(--color-primary);
-  border: 3px solid var(--color-surface);
-  box-shadow: var(--shadow-md);
+  background: var(--colorSliderThumbBg);
+  border: 2px solid var(--colorSliderThumbStrokeTo);
+  box-shadow: var(--shadowSliderThumb);
   cursor: pointer;
 }
 
 .price-slider__input::-moz-range-thumb {
-  width: 22px;
-  height: 22px;
+  width: var(--sliderThumbSizeMd);
+  height: var(--sliderThumbSizeMd);
   border-radius: 50%;
-  background: var(--color-primary);
-  border: 3px solid var(--color-surface);
-  box-shadow: var(--shadow-md);
+  background: var(--colorSliderThumbBg);
+  border: 2px solid var(--colorSliderThumbStrokeTo);
+  box-shadow: var(--shadowSliderThumb);
   cursor: pointer;
 }
 
 .price-slider__range-labels {
   display: flex;
   justify-content: space-between;
-  margin-top: var(--space-2);
-  font-size: 12px;
-  color: var(--color-text-muted);
+  margin-top: 8px;
+  font-family: var(--fontFamily);
+  font-size: var(--fontLabelMdSize);
+  color: var(--colorTextSecondary);
 }

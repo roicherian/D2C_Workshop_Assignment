@@ -1,48 +1,134 @@
 .acko-typography {
   margin: 0;
-  color: var(--color-text);
-  font-family: var(--font-sans);
+  font-family: var(--fontFamily);
+  color: var(--colorTextPrimary);
 }
 
-.acko-typography--display {
-  font-size: 28px;
-  line-height: 1.25;
-  font-weight: 700;
+.acko-typography--display-sm {
+  font-size: var(--fontDisplaySmSize);
+  line-height: var(--fontDisplaySmLine);
+  letter-spacing: var(--fontDisplaySmSpacing);
+  font-weight: var(--fontDisplaySmWeight);
 }
 
-.acko-typography--h1 {
-  font-size: 22px;
-  line-height: 1.3;
-  font-weight: 700;
+.acko-typography--heading-lg {
+  font-size: var(--fontHeadingLgSize);
+  line-height: var(--fontHeadingLgLine);
+  letter-spacing: var(--fontHeadingLgSpacing);
+  font-weight: var(--fontHeadingLgWeight);
 }
 
-.acko-typography--h2 {
-  font-size: 18px;
-  line-height: 1.3;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+.acko-typography--heading-md {
+  font-size: var(--fontHeadingMdSize);
+  line-height: var(--fontHeadingMdLine);
+  letter-spacing: var(--fontHeadingMdSpacing);
+  font-weight: var(--fontHeadingMdWeight);
 }
 
-.acko-typography--h3 {
-  font-size: 16px;
-  line-height: 1.4;
-  font-weight: 600;
+.acko-typography--heading-sm {
+  font-size: var(--fontHeadingSmSize);
+  line-height: var(--fontHeadingSmLine);
+  letter-spacing: var(--fontHeadingSmSpacing);
+  font-weight: var(--fontHeadingSmWeight);
 }
 
-.acko-typography--body {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--color-text-muted);
+.acko-typography--body-lg {
+  font-size: var(--fontBodyLgSize);
+  line-height: var(--fontBodyLgLine);
+  letter-spacing: var(--fontBodyLgSpacing);
+  font-weight: var(--fontBodyLgWeight);
 }
 
-.acko-typography--bodySmall {
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--color-text-muted);
+.acko-typography--body-md {
+  font-size: var(--fontBodyMdSize);
+  line-height: var(--fontBodyMdLine);
+  letter-spacing: var(--fontBodyMdSpacing);
+  font-weight: var(--fontBodyMdWeight);
+}
+
+.acko-typography--body-sm {
+  font-size: var(--fontBodySmSize);
+  line-height: var(--fontBodySmLine);
+  letter-spacing: var(--fontBodySmSpacing);
+  font-weight: var(--fontBodySmWeight);
+}
+
+.acko-typography--label-lg {
+  font-size: var(--fontLabelLgSize);
+  line-height: var(--fontLabelLgLine);
+  letter-spacing: var(--fontLabelLgSpacing);
+  font-weight: var(--fontLabelLgWeight);
+}
+
+.acko-typography--label-md {
+  font-size: var(--fontLabelMdSize);
+  line-height: var(--fontLabelMdLine);
+  letter-spacing: var(--fontLabelMdSpacing);
+  font-weight: var(--fontLabelMdWeight);
 }
 
 .acko-typography--caption {
-  font-size: 11px;
-  line-height: 1.5;
-  color: var(--color-text-muted);
+  font-size: var(--fontCaptionSize);
+  line-height: var(--fontCaptionLine);
+  letter-spacing: var(--fontCaptionSpacing);
+  font-weight: var(--fontCaptionWeight);
+}
+
+.acko-typography--overline {
+  font-size: var(--fontOverlineSize);
+  line-height: var(--fontOverlineLine);
+  letter-spacing: var(--fontOverlineSpacing);
+  font-weight: var(--fontOverlineWeight);
+  text-transform: uppercase;
+}
+
+.acko-typography--weight-regular {
+  font-weight: var(--fontWeightRegular);
+}
+.acko-typography--weight-medium {
+  font-weight: var(--fontWeightMedium);
+}
+.acko-typography--weight-semibold {
+  font-weight: var(--fontWeightSemibold);
+}
+.acko-typography--weight-bold {
+  font-weight: var(--fontWeightBold);
+}
+
+.acko-typography--color-primary {
+  color: var(--colorTextPrimary);
+}
+.acko-typography--color-secondary {
+  color: var(--colorTextSecondary);
+}
+.acko-typography--color-invert {
+  color: var(--colorTextInvert);
+}
+.acko-typography--color-brand {
+  color: var(--colorTextBrand);
+}
+.acko-typography--color-error {
+  color: var(--colorTextError);
+}
+.acko-typography--color-success {
+  color: var(--colorTextSuccess);
+}
+.acko-typography--color-static {
+  color: var(--colorTextStatic);
+}
+
+.acko-typography--align-left {
+  text-align: left;
+}
+.acko-typography--align-center {
+  text-align: center;
+}
+.acko-typography--align-right {
+  text-align: right;
+}
+
+.acko-typography--truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

@@ -2,29 +2,32 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-1);
+  gap: 4px;
 }
 
 .acko-breadcrumb li {
   display: flex;
   align-items: center;
-  gap: var(--space-1);
-  font-size: 13px;
-  color: var(--color-text-muted);
+  gap: 4px;
+  font-size: var(--fontLabelLgSize);
+  font-weight: var(--fontLabelLgWeight);
+  color: var(--colorBreadcrumbText);
 }
 
 .acko-breadcrumb a {
-  color: var(--color-text-muted);
+  color: var(--colorBreadcrumbLink);
 }
-.acko-breadcrumb a:hover {
-  color: var(--color-primary);
+@media (hover: hover) and (pointer: fine) {
+  .acko-breadcrumb a:hover {
+    color: var(--colorBreadcrumbLinkHover);
+  }
 }
 
 .acko-breadcrumb span[aria-current='page'] {
-  color: var(--color-text);
-  font-weight: 600;
+  color: var(--colorBreadcrumbCurrent);
+  font-weight: var(--fontWeightSemibold);
 }
 
 .acko-breadcrumb__separator {
-  color: var(--color-border);
+  color: var(--colorBreadcrumbSeparator);
 }

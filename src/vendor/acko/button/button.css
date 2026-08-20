@@ -1,61 +1,92 @@
-.acko-button {
+.acko-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-2);
+  gap: 8px;
   border: none;
-  border-radius: var(--radius-full);
+  border-radius: var(--radiusFull);
+  font-family: var(--fontFamily);
   font-weight: 600;
   cursor: pointer;
-  transition:
-    background-color 0.15s ease,
-    transform 0.05s ease;
+  box-shadow: var(--shadowBtnInner);
+  transition: background-color 0.15s ease;
 }
 
-.acko-button:active {
-  transform: scale(0.98);
+.acko-btn-icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+}
+.acko-btn-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
-.acko-button--md {
-  padding: var(--space-3) var(--space-5);
-  font-size: 15px;
+.acko-btn--xs {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 12px;
 }
-
-.acko-button--lg {
-  padding: var(--space-4) var(--space-6);
+.acko-btn--sm {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+.acko-btn--md {
+  height: 48px;
+  padding: 0 24px;
   font-size: 16px;
+}
+.acko-btn--lg {
+  height: 56px;
+  padding: 0 24px;
+  font-size: 18px;
+}
+.acko-btn--xl {
+  height: 64px;
+  padding: 0 32px;
+  font-size: 20px;
+}
+
+.acko-btn--full {
   width: 100%;
 }
 
-.acko-button--sm {
-  padding: var(--space-2) var(--space-4);
-  font-size: 13px;
+.acko-btn--primary {
+  background: var(--colorPrimary);
+  color: var(--colorOnPrimary);
+}
+@media (hover: hover) and (pointer: fine) {
+  .acko-btn--primary:hover {
+    background: var(--colorPrimaryHover);
+    box-shadow: var(--shadowBtnHover);
+  }
+}
+.acko-btn--primary:active {
+  background: var(--colorPrimaryActive);
 }
 
-.acko-button--primary {
-  background: var(--color-primary);
-  color: var(--color-primary-foreground);
-}
-.acko-button--primary:hover {
-  background: var(--color-primary-hover);
-}
-
-.acko-button--secondary {
-  background: var(--color-secondary);
-  color: var(--color-secondary-foreground);
-  border: 1px solid var(--color-border);
+.acko-btn--secondary {
+  background: var(--colorBtnSecondaryBg);
+  color: var(--colorBtnSecondaryText);
+  border: 1px solid var(--colorBtnSecondaryBorder);
+  box-shadow: none;
 }
 
-.acko-button--ghost {
+.acko-btn--ghost {
   background: transparent;
-  color: var(--color-text);
+  color: var(--colorBtnGhostColor);
+  box-shadow: none;
 }
-.acko-button--ghost:hover {
-  background: var(--color-surface-muted);
+@media (hover: hover) and (pointer: fine) {
+  .acko-btn--ghost:hover {
+    background: var(--colorBtnGhostHoverBg);
+  }
 }
 
-.acko-button--icon {
-  padding: var(--space-2);
-  width: 40px;
-  height: 40px;
+.acko-btn--icon {
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  position: relative;
 }

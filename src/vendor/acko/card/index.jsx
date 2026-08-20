@@ -1,8 +1,8 @@
 import './card.css'
 
-export function Card({ className = '', children, ...props }) {
+export function Card({ padding = 'md', className = '', children, ...props }) {
   return (
-    <div className={['acko-card', className].filter(Boolean).join(' ')} {...props}>
+    <div className={['acko-card', `acko-card--padding-${padding}`, className].filter(Boolean).join(' ')} {...props}>
       {children}
     </div>
   )

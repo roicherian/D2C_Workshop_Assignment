@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { ArrowRight } from 'lucide-react'
 import { Breadcrumb } from '@acko/breadcrumb'
 import { Typography } from '@acko/typography'
 import { Field } from '@acko/field'
@@ -69,16 +70,16 @@ export function TermInsuranceQuote() {
         <Breadcrumb
           items={[
             { label: 'Home', href: '/' },
-            { label: 'Life Insurance', href: '/life-insurance' },
-            { label: 'Term Insurance', href: '/' },
-            { label: 'Get Quote' },
+            { label: 'Life insurance', href: '/life-insurance' },
+            { label: 'Term insurance', href: '/' },
+            { label: 'Get quote' },
           ]}
         />
 
-        <Typography as="h1" variant="h1" className="term-insurance-quote__heading">
+        <Typography as="h1" variant="heading-lg" weight="bold" className="term-insurance-quote__heading">
           Get your term insurance quote
         </Typography>
-        <Typography variant="body" className="term-insurance-quote__subheading">
+        <Typography variant="body-md" color="secondary" className="term-insurance-quote__subheading">
           Answer a few quick questions to see your estimated premium.
         </Typography>
 
@@ -143,27 +144,34 @@ export function TermInsuranceQuote() {
             <Dropdown id="term" value={form.term} onChange={(value) => setField('term', value)} options={TERM_OPTIONS} />
           </Field>
 
-          <Button type="submit" variant="primary" size="lg" className="term-insurance-quote__submit">
+          <Button
+            type="submit"
+            variant="primary"
+            size="lg"
+            fullWidth
+            iconRight={<ArrowRight aria-hidden="true" />}
+            className="term-insurance-quote__submit"
+          >
             See my premium
           </Button>
         </form>
 
         {quote && (
-          <Card className="term-insurance-quote__result">
+          <Card padding="lg" className="term-insurance-quote__result">
             <CardHeader>
-              <Typography as="h3" variant="h3">
+              <Typography as="h3" variant="heading-md" weight="semibold">
                 Your estimated premium
               </Typography>
             </CardHeader>
             <CardContent>
-              <Typography variant="display" className="term-insurance-quote__premium">
+              <Typography variant="display-sm" weight="bold" className="term-insurance-quote__premium">
                 ₹{quote.premium.toLocaleString('en-IN')}
                 <span className="term-insurance-quote__premium-period">/month</span>
               </Typography>
-              <Typography variant="bodySmall" className="term-insurance-quote__summary">
+              <Typography variant="body-sm" color="secondary" className="term-insurance-quote__summary">
                 {formatCoverage(quote.coverage)} cover for {quote.term} years
               </Typography>
-              <Typography variant="caption" className="term-insurance-quote__disclaimer">
+              <Typography variant="caption" color="secondary" className="term-insurance-quote__disclaimer">
                 This is an indicative estimate only. Final premium depends on medical underwriting. ARN: L0130 | *T&C Apply
               </Typography>
             </CardContent>

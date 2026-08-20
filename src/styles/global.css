@@ -1,3 +1,34 @@
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('https://pub-c050457d48794d5bb9ffc2b4649de2c1.r2.dev/Euclid%20Font/EuclidCircularB-Light.otf') format('opentype');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('https://pub-c050457d48794d5bb9ffc2b4649de2c1.r2.dev/Euclid%20Font/EuclidCircularB-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('https://pub-c050457d48794d5bb9ffc2b4649de2c1.r2.dev/Euclid%20Font/EuclidCircularB-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('https://pub-c050457d48794d5bb9ffc2b4649de2c1.r2.dev/Euclid%20Font/EuclidCircularB-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('https://pub-c050457d48794d5bb9ffc2b4649de2c1.r2.dev/Euclid%20Font/EuclidCircularB-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,10 +41,20 @@ body,
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
-  color: var(--color-text);
-  background: var(--color-surface-muted);
+  font-family: var(--fontFamily);
+  color: var(--colorTextPrimary);
+  background: var(--colorSurface);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
 }
 
 a {
@@ -21,7 +62,12 @@ a {
   text-decoration: none;
 }
 
-button {
+button,
+a,
+input,
+select,
+label {
+  touch-action: manipulation;
   font-family: inherit;
 }
 
@@ -32,11 +78,27 @@ ol {
   list-style: none;
 }
 
+:focus-visible {
+  box-shadow: var(--shadowFocusRing);
+  border-radius: var(--radiusSm);
+  outline: none;
+}
+:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .app-shell {
   max-width: 430px;
   margin: 0 auto;
   min-height: 100vh;
-  background: var(--color-bg);
-  box-shadow: var(--shadow-md);
+  background: var(--colorCardBg);
+  box-shadow: var(--shadowMd);
   overflow-x: hidden;
 }

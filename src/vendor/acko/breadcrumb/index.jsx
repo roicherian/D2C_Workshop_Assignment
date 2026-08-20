@@ -1,3 +1,4 @@
+import { ChevronRight } from 'lucide-react'
 import './breadcrumb.css'
 
 export function Breadcrumb({ items = [] }) {
@@ -13,7 +14,9 @@ export function Breadcrumb({ items = [] }) {
               ) : (
                 <span aria-current={isLast ? 'page' : undefined}>{item.label}</span>
               )}
-              {!isLast && <span className="acko-breadcrumb__separator">/</span>}
+              {!isLast && (
+                <ChevronRight className="acko-breadcrumb__separator" aria-hidden="true" size={14} />
+              )}
             </li>
           )
         })}

@@ -9,8 +9,8 @@ import { ShieldUpIcon, HandIcon } from '../components/icons'
 import './term-insurance-landing.css'
 
 const HERO_FEATURES = [
-  { icon: <ShieldUpIcon />, text: 'Coverage from ₹25 lakh onwards' },
-  { icon: <HandIcon />, text: 'Adjust your coverage when you need' },
+  { icon: <ShieldUpIcon aria-hidden="true" />, text: 'Coverage from ₹25 lakh onwards' },
+  { icon: <HandIcon aria-hidden="true" />, text: 'Adjust your coverage when you need' },
 ]
 
 export function TermInsuranceLanding() {
@@ -30,26 +30,30 @@ export function TermInsuranceLanding() {
         <Breadcrumb
           items={[
             { label: 'Home', href: '/' },
-            { label: 'Life Insurance', href: '/life-insurance' },
-            { label: 'Term Insurance' },
+            { label: 'Life insurance', href: '/life-insurance' },
+            { label: 'Term insurance' },
           ]}
         />
 
         <section className="term-insurance-landing__content">
-          <Typography as="h2" variant="h2" className="term-insurance-landing__heading">
-            TERM INSURANCE
+          <Typography variant="overline" color="brand" className="term-insurance-landing__eyebrow">
+            Term insurance
           </Typography>
-          <Typography variant="body" className="term-insurance-landing__body">
-            Term insurance is the purest form of life insurance. It protects the people who depend on you.
-            A term insurance plan gives your family a fixed amount of money if you pass away during the
-            policy period. This money can help your dependents pay for daily household expenses,
-            outstanding loans, your children's education, and other financial goals — even when
-            you're no longer there to provide for them.
+          <Typography as="h2" variant="heading-lg" weight="bold" className="term-insurance-landing__heading">
+            The purest form of life insurance
+          </Typography>
+          <Typography variant="body-md" color="secondary" className="term-insurance-landing__body">
+            Term insurance protects the people who depend on you. A term insurance plan gives your
+            family a fixed amount of money if you pass away during the policy period. This money can
+            help your dependents pay for daily household expenses, outstanding loans, your children's
+            education, and other financial goals — even when you're no longer there to provide for
+            them.
           </Typography>
 
           <Button
             variant="secondary"
             size="lg"
+            fullWidth
             className="term-insurance-landing__preview-modal-btn"
             onClick={() => setIsLeadModalOpen(true)}
           >

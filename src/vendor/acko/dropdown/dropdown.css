@@ -1,15 +1,17 @@
 .acko-dropdown {
   width: 100%;
-  padding: var(--space-3) var(--space-4);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  font-size: 15px;
-  color: var(--color-text);
-  background-color: var(--color-surface);
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--colorInputBorder);
+  border-radius: var(--radiusLg);
+  font-family: var(--fontFamily);
+  font-size: var(--fontBodyMdSize);
+  color: var(--colorTextPrimary);
+  background-color: var(--colorInputBg);
   appearance: none;
   background-image:
-    linear-gradient(45deg, transparent 50%, var(--color-text-muted) 50%),
-    linear-gradient(135deg, var(--color-text-muted) 50%, transparent 50%);
+    linear-gradient(45deg, transparent 50%, var(--colorTextSecondary) 50%),
+    linear-gradient(135deg, var(--colorTextSecondary) 50%, transparent 50%);
   background-position:
     calc(100% - 20px) calc(50% - 3px),
     calc(100% - 15px) calc(50% - 3px);
@@ -18,6 +20,5 @@
 }
 
 .acko-dropdown:focus {
-  outline: none;
-  border-color: var(--color-primary);
+  border-color: var(--colorInputFocusBorder);
 }

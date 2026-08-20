@@ -16,7 +16,7 @@ export function QuoteLeadModal({ open, onClose }) {
     <Modal open={open} onClose={onClose}>
       <ModalHeader title="Let's build a perfect life insurance cover for you" onClose={onClose} />
       <ModalBody>
-        <Field label="Your Name" htmlFor="lead-name">
+        <Field label="Your name" htmlFor="lead-name">
           <TextInput id="lead-name" placeholder="Ramman" value={name} onChange={(e) => setName(e.target.value)} />
         </Field>
 
@@ -46,7 +46,7 @@ export function QuoteLeadModal({ open, onClose }) {
       </ModalBody>
       <ModalFooter>
         <CtaCheckPricesButton />
-        <Typography variant="caption" className="quote-lead-modal__fine-print">
+        <Typography variant="caption" color="secondary" align="center" className="quote-lead-modal__fine-print">
           ARN: L0053 | *T&Cs Apply
         </Typography>
       </ModalFooter>
