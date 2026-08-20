@@ -1,0 +1,55 @@
+import { useState } from 'react'
+import { Field } from '@acko/field'
+import { TextInput } from '@acko/textinput'
+import { Typography } from '@acko/typography'
+import { Modal, ModalHeader, ModalBody, ModalFooter } from './Modal'
+import { SegmentedToggleGroup } from './SegmentedToggleGroup'
+import { CtaCheckPricesButton } from './CtaCheckPricesButton'
+import './quote-lead-modal.css'
+
+export function QuoteLeadModal({ open, onClose }) {
+  const [name, setName] = useState('')
+  const [gender, setGender] = useState('male')
+  const [smoker, setSmoker] = useState('no')
+
+  return (
+    <Modal open={open} onClose={onClose}>
+      <ModalHeader title="Let's build a perfect life insurance cover for you" onClose={onClose} />
+      <ModalBody>
+        <Field label="Your Name" htmlFor="lead-name">
+          <TextInput id="lead-name" placeholder="Ramman" value={name} onChange={(e) => setName(e.target.value)} />
+        </Field>
+
+        <Field label="Your gender">
+          <SegmentedToggleGroup
+            name="lead-gender"
+            value={gender}
+            onChange={setGender}
+            options={[
+              { value: 'male', label: 'Male' },
+              { value: 'female', label: 'Female' },
+            ]}
+          />
+        </Field>
+
+        <Field label="Have you smoked in the past 12 months?">
+          <SegmentedToggleGroup
+            name="lead-smoker"
+            value={smoker}
+            onChange={setSmoker}
+            options={[
+              { value: 'yes', label: 'Yes' },
+              { value: 'no', label: 'No' },
+            ]}
+          />
+        </Field>
+      </ModalBody>
+      <ModalFooter>
+        <CtaCheckPricesButton />
+        <Typography variant="caption" className="quote-lead-modal__fine-print">
+          ARN: L0053 | *T&Cs Apply
+        </Typography>
+      </ModalFooter>
+    </Modal>
+  )
+}

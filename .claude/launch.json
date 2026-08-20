@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "d2c-dev",
+      "runtimeExecutable": "/private/tmp/claude-503/-Users-roy-cherian-Documents-D2C-Workshop-Assignment/9b8b2ffe-b194-436d-8c25-ee6c41095bd8/scratchpad/node/bin/node",
+      "runtimeArgs": ["node_modules/.bin/vite", "--host"],
+      "port": 5173
+    }
+  ]
+}
