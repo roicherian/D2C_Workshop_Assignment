@@ -3,7 +3,7 @@ import { Typography } from '@acko/typography'
 import { CtaCheckPricesButton } from './CtaCheckPricesButton'
 import './hero.css'
 
-export function Hero({ headline, features, arn, ctaTo, ctaLabel = 'Check prices' }) {
+export function Hero({ headline, features, arn, ctaTo, ctaLabel = 'Check prices', onCtaClick }) {
   return (
     <section className="hero">
       <div className="hero__inner">
@@ -24,7 +24,9 @@ export function Hero({ headline, features, arn, ctaTo, ctaLabel = 'Check prices'
           ))}
         </div>
 
-        <CtaCheckPricesButton to={ctaTo}>{ctaLabel}</CtaCheckPricesButton>
+        <CtaCheckPricesButton to={ctaTo} onClick={onCtaClick}>
+          {ctaLabel}
+        </CtaCheckPricesButton>
 
         <Typography variant="caption" color="secondary" align="center" className="hero__fine-print">
           {arn}

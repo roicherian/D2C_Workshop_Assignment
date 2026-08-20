@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { Breadcrumb } from '@acko/breadcrumb'
 import { Typography } from '@acko/typography'
 import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
+import { QuoteLeadModal } from '../components/QuoteLeadModal'
 import { ShieldUpIcon, HandIcon } from '../components/icons'
 import './term-insurance-landing.css'
 
@@ -11,6 +13,8 @@ const HERO_FEATURES = [
 ]
 
 export function TermInsuranceLanding() {
+  const [isCheckPricesOpen, setIsCheckPricesOpen] = useState(false)
+
   return (
     <div className="term-insurance-landing">
       <Header />
@@ -18,7 +22,7 @@ export function TermInsuranceLanding() {
         headline="Protect your family with 100% pure life insurance"
         features={HERO_FEATURES}
         arn="ARN: L0130 | *T&C Apply"
-        ctaTo="/quote"
+        onCtaClick={() => setIsCheckPricesOpen(true)}
       />
 
       <div className="term-insurance-landing__container">
@@ -46,6 +50,8 @@ export function TermInsuranceLanding() {
           </Typography>
         </section>
       </div>
+
+      <QuoteLeadModal open={isCheckPricesOpen} onClose={() => setIsCheckPricesOpen(false)} />
     </div>
   )
 }
