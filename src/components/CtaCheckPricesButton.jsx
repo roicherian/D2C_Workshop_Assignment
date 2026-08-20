@@ -5,11 +5,11 @@ import './cta-check-prices-button.css'
 // VARIANT-GAP: @acko/button has no "success" variant for high-emphasis
 // conversion CTAs, so we wrap it and override the fill color.
 // See missing-components-term-insurance-landing.md.
-export function CtaCheckPricesButton() {
+export function CtaCheckPricesButton({ to = '/quote', children = 'Check prices' }) {
   const navigate = useNavigate()
   return (
-    <Button variant="primary" size="lg" className="cta-check-prices" onClick={() => navigate('/quote')}>
-      Check prices
+    <Button variant="primary" size="lg" className="cta-check-prices" onClick={() => navigate(to)}>
+      {children}
     </Button>
   )
 }

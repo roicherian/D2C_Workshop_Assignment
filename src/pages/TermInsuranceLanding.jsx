@@ -5,7 +5,13 @@ import { Button } from '@acko/button'
 import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
 import { QuoteLeadModal } from '../components/QuoteLeadModal'
+import { ShieldUpIcon, HandIcon } from '../components/icons'
 import './term-insurance-landing.css'
+
+const HERO_FEATURES = [
+  { icon: <ShieldUpIcon />, text: 'Coverage from ₹25 lakh onwards' },
+  { icon: <HandIcon />, text: 'Adjust your coverage when you need' },
+]
 
 export function TermInsuranceLanding() {
   const [isLeadModalOpen, setIsLeadModalOpen] = useState(false)
@@ -13,7 +19,12 @@ export function TermInsuranceLanding() {
   return (
     <div className="term-insurance-landing">
       <Header />
-      <Hero />
+      <Hero
+        headline="Protect your family with 100% pure life insurance"
+        features={HERO_FEATURES}
+        arn="ARN: L0130 | *T&C Apply"
+        ctaTo="/quote"
+      />
 
       <div className="term-insurance-landing__container">
         <Breadcrumb

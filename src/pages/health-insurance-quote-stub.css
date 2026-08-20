@@ -1,0 +1,8 @@
+.health-insurance-quote-stub {
+  padding: var(--space-5);
+}
+
+.health-insurance-quote-stub__heading {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-3);
+}

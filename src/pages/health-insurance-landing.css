@@ -1,0 +1,16 @@
+.health-insurance-landing__container {
+  padding: var(--space-5);
+}
+
+.health-insurance-landing__content {
+  margin-top: var(--space-5);
+}
+
+.health-insurance-landing__heading {
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.health-insurance-landing__body {
+  margin: 0;
+}
