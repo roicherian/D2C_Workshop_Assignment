@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Breadcrumb } from '@acko/breadcrumb'
 import { Typography } from '@acko/typography'
+import { Card, CardContent } from '@acko/card'
 import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
 import { QuoteLeadModal } from '../components/QuoteLeadModal'
@@ -34,18 +35,20 @@ export function TermInsuranceLanding() {
           ]}
         />
 
-        <section className="term-insurance-landing__content">
-          <Typography as="h2" variant="heading-sm" weight="bold" color="brand" className="term-insurance-landing__heading">
-            Term insurance
-          </Typography>
-          <Typography variant="body-md" className="term-insurance-landing__body">
-            Term insurance is the purest form of life insurance. It protects the people who depend on
-            you. A term insurance plan gives your family a fixed amount of money if you pass away
-            during the policy period. This money can help your dependents pay for daily household
-            expenses, outstanding loans, your children's education, and other financial goals — even
-            when you're no longer there to provide for them.
-          </Typography>
-        </section>
+        <Card variant="outline" padding="lg" className="term-insurance-landing__content">
+          <CardContent>
+            <Typography variant="overline" color="brand" className="term-insurance-landing__eyebrow">
+              Term insurance
+            </Typography>
+            <Typography variant="body-md">
+              Term insurance is the purest form of life insurance. It protects the people who depend
+              on you. A term insurance plan gives your family a fixed amount of money if you pass away
+              during the policy period. This money can help your dependents pay for daily household
+              expenses, outstanding loans, your children's education, and other financial goals — even
+              when you're no longer there to provide for them.
+            </Typography>
+          </CardContent>
+        </Card>
       </div>
 
       <QuoteLeadModal open={isCheckPricesOpen} onClose={() => setIsCheckPricesOpen(false)} />

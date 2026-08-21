@@ -13,9 +13,6 @@
 .term-insurance-landing__content {
   max-width: 640px;
   margin-top: 24px;
-  padding: 20px;
-  border: 1px solid var(--colorBorder);
-  border-radius: var(--radius2xl);
 }
 
 @media (min-width: 768px) {
@@ -24,12 +21,7 @@
   }
 }
 
-.term-insurance-landing__heading {
+.term-insurance-landing__eyebrow {
   display: block;
   margin-bottom: 12px;
-  text-transform: uppercase;
-}
-
-.term-insurance-landing__body {
-  margin: 0;
 }
