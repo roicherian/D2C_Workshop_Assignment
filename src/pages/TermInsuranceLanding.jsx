@@ -35,18 +35,15 @@ export function TermInsuranceLanding() {
         />
 
         <section className="term-insurance-landing__content">
-          <Typography variant="overline" color="brand" className="term-insurance-landing__eyebrow">
+          <Typography as="h2" variant="heading-sm" weight="bold" color="brand" className="term-insurance-landing__heading">
             Term insurance
           </Typography>
-          <Typography as="h2" variant="heading-lg" weight="bold" className="term-insurance-landing__heading">
-            The purest form of life insurance
-          </Typography>
-          <Typography variant="body-md" color="secondary" className="term-insurance-landing__body">
-            Term insurance protects the people who depend on you. A term insurance plan gives your
-            family a fixed amount of money if you pass away during the policy period. This money can
-            help your dependents pay for daily household expenses, outstanding loans, your children's
-            education, and other financial goals — even when you're no longer there to provide for
-            them.
+          <Typography variant="body-md" className="term-insurance-landing__body">
+            Term insurance is the purest form of life insurance. It protects the people who depend on
+            you. A term insurance plan gives your family a fixed amount of money if you pass away
+            during the policy period. This money can help your dependents pay for daily household
+            expenses, outstanding loans, your children's education, and other financial goals — even
+            when you're no longer there to provide for them.
           </Typography>
         </section>
       </div>
